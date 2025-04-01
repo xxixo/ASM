@@ -2,7 +2,7 @@
 
 
 {% block content %}
-<h2>Налаштуйте таблиці та їх поля</h2>
+<h2>Manage Tables and its fieldset</h2>
 
 
 <div class="button-container">
@@ -23,8 +23,8 @@
     <table class="table table-bordered">
         <thead>
             <tr>
-                <th>Назва таблиці</th>
-                <th>Управляти колонками</th>
+                <th>Table name</th>
+                <th>Manage Columns</th>
             </tr>
         </thead>
         <tbody>
@@ -32,7 +32,7 @@
             <tr>
                 <td>{{ table }}</td>
                 <td>
-                    <a href="{{ url_for('manage_table', table_name=table) }}" class="btn btn-primary">Manage Columns</a>
+                    <a href="{{ url_for('manage_table', table_name=table) }}" class="btn btn-primary">Manage</a>
                 </td>
             </tr>
             {% endfor %}

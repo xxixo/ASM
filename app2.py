@@ -45,7 +45,7 @@ app = Flask(__name__)
 app.secret_key = 'your_secret_key'
 global redis_client
 redis_client = setup_redis(app)
-setting_modules = ['Shema', 'Redis']
+setting_modules = ['shema', 'redis']
 
 @app.route('/')
 def home():
