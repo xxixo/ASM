@@ -2,9 +2,40 @@
 
 
 {% block content %}
-<h2>Налаштування Shema</h2>
-<form method="post">
-    Тут будуть налатовуватись таблиці та їх поля
+<h2>Налаштуйте таблиці та їх поля</h2>
+
+
+<div class="button-container">
+    <form method="POST" action="{{ url_for('create_table') }}">
+        <input type="text" name="table_name" class="form-control" placeholder="Enter table name" required>
+        <button type="submit" class="create">Create Table</button>
+    </form>
+</div>
+
+
+<div class="button-container">
+    <form method="POST" action="{{ url_for('drop_table') }}">
+        <input type="text" name="delete_table_name" class="form-control" placeholder="Enter table name to delete" required>
+        <button action="{{ url_for('drop_table') }}" type="submit" class="delete">Delete Table</button>
 </form>
 
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Table Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for table in tables %}
+            <tr>
+                <td>{{ table }}</td>
+                <td>
+
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 {% endblock %}
