@@ -1,27 +1,5 @@
-{% extends 'base.html' %}
+{% extends "components/base.html" %}
 
 {% block content %}
-<h2>Redis Settings</h2>
-
-<!-- Flash Messages -->
-{% with messages = get_flashed_messages(with_categories=true) %}
-    {% if messages %}
-        {% for category, message in messages %}
-            <div>{{ message }}</div>
-        {% endfor %}
-    {% endif %}
-{% endwith %}
-
-<form action="{{ url_for('redis_settings') }}" method="POST">
-    <label for="host">Redis Host:</label>
-    <input type="text" id="host" name="host" value="{{ current_host }}" required>
-
-    <label for="port">Redis Port:</label>
-    <input type="text" id="port" name="port" value="{{ current_port }}" required>
-
-    <button type="submit">Save Settings</button>
-</form>
-
-<a href="{{ url_for('index') }}">Back to Home</a>
-
+    This is Settings
 {% endblock %}

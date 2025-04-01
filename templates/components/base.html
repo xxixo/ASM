@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/static/css/body.css">
+    <link rel="stylesheet" href="/static/css/top-nav.css">
+    <link rel="stylesheet" href="/static/css/left-nav.css">
+
+</head>
+
+<body>
+    {% include "components/top-navbar.html" %}
+    <div class="container">
+        {% include "components/left-navbar.html" %}
+
+        <main class="main-content">
+            {% block content %}
+                <p>This is a base text</p>
+            {% endblock %}
+        </main>
+    </body>
+</html>

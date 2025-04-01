@@ -1,0 +1,13 @@
+<div class="sidebar">
+    <aside class="left-sidebar">
+        <h3> {{ title }}</h3>
+        <ul class="repo-list">
+            {% block left_navbar %}
+                {% for item in left_nav_bar_items %} 
+                    <li><a href="#">{{ item }}</a></li>
+                {% endfor %}
+            {% endblock %}
+    
+        </ul>
+    </aside>
+</div>

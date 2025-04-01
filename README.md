@@ -13,3 +13,9 @@ source venv/bin/activate
 pip3 install -r requiroments.txt
 ```
 
+
+
+/ 
+
+/shema
+

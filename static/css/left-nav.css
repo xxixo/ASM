@@ -1,0 +1,39 @@
+
+.sidebar {
+    width: 10%;
+    background-color: #161b22;
+    color: white;
+    padding: 20px;
+    height: 100vh;
+    border-radius: 8px;
+}
+
+
+h3 {
+    margin: 0 0 10px;
+}
+.new-btn {
+    background-color: #238636;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.repo-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.repo-list li {
+    padding: 5px 0;
+}
+.repo-list a {
+    color: #58a6ff;
+    text-decoration: none;
+}
+.repo-list a:hover {
+    text-decoration: underline;
+}
