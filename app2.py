@@ -59,8 +59,6 @@ def settings():
 def module_settings(module):
     modules = [{'name':'Redis', 'link':'redis'}, 
                                      {'name':'Shema', 'link':'shema'}]
-    
-
     if module == 'redis':
         if request.method == 'POST':
             new_config = {
@@ -78,9 +76,9 @@ def module_settings(module):
             return redirect(url_for("settings"))   
                 
         current_config = load_redis_config()
-        return render_template(f'/settings/modules/{module}.html', title='Settings',parent_link='/settings', left_nav_bar_items=modules, config=current_config)
+        return render_template(f'/settings/modules/{module}/redis.html', title='Settings',parent_link='/settings', left_nav_bar_items=modules, config=current_config)
     
-    return render_template(f'/settings/modules/{module}.html', title='Settings',parent_link='/settings', left_nav_bar_items=modules)
+    return render_template(f'/settings/modules/{module}/redis.html', title='Settings',parent_link='/settings', left_nav_bar_items=modules)
 
 
 
