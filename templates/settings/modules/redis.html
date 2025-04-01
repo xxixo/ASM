@@ -1,0 +1,12 @@
+{% extends "components/base.html" %}
+
+
+{% block content %}
+<h2>Налаштування Redis</h2>
+<form method="post">
+    <label>Host: <input type="text" name="host" value="{{ config.host }}"></label><br>
+    <label>Port: <input type="number" name="port" value="{{ config.port }}"></label><br>
+    <button type="submit">Зберегти</button>
+</form>
+
+{% endblock %}

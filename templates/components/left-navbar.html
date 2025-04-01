@@ -4,7 +4,7 @@
         <ul class="repo-list">
             {% block left_navbar %}
                 {% for item in left_nav_bar_items %} 
-                    <li><a href="#">{{ item }}</a></li>
+                    <li><a href="{{ parent_link }}/{{ item['link'] }}">{{ item['name'] }}</a></li>
                 {% endfor %}
             {% endblock %}
     
