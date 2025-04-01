@@ -23,8 +23,8 @@
     <table class="table table-bordered">
         <thead>
             <tr>
-                <th>Table Name</th>
-                <th>Actions</th>
+                <th>Назва таблиці</th>
+                <th>Управляти колонками</th>
             </tr>
         </thead>
         <tbody>
@@ -32,10 +32,11 @@
             <tr>
                 <td>{{ table }}</td>
                 <td>
-
+                    <a href="{{ url_for('manage_table', table_name=table) }}" class="btn btn-primary">Manage Columns</a>
                 </td>
             </tr>
             {% endfor %}
         </tbody>
     </table>
+</div>
 {% endblock %}

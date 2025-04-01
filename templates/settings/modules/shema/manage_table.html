@@ -1,0 +1,36 @@
+{% extends "components/base.html" %}
+
+{% block content %}
+<h2>Manage Table: {{ table_name }}</h2>
+
+<h3>Columns</h3>
+<ul>
+    {% for column in columns %}
+    <li>{{ column }}</li>
+    {% endfor %}
+</ul>
+
+<h3>Add Column</h3>
+<form method="POST" action="{{ url_for('manage_table', table_name=table_name) }}">
+    <input type="hidden" name="action" value="add">
+    <input type="text" name="column_name" placeholder="Column name" required>
+    <button type="submit" class="create">Add Column</button>
+</form>
+
+<h3>Rename Column</h3>
+<form method="POST" action="{{ url_for('manage_table', table_name=table_name) }}">
+    <input type="hidden" name="action" value="rename">
+    <input type="text" name="column_name" placeholder="Current column name" required>
+    <input type="text" name="new_column_name" placeholder="New column name" required>
+    <button type="submit" class="create">Rename Column</button>
+</form>
+
+<h3>Delete Column</h3>
+<form method="POST" action="{{ url_for('manage_table', table_name=table_name) }}">
+    <input type="hidden" name="action" value="delete">
+    <input type="text" name="column_name" placeholder="Column name" required>
+    <button type="submit" class="delete">Delete Column</button>
+</form>
+
+<a href="{{ parent_link }}">Back to Tables</a>
+{% endblock %}

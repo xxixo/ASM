@@ -1,6 +1,29 @@
 {% extends "components/base.html" %}
 
 {% block content %}
-    <h1> Home </h1>
-    <p> Just a paragraf</p>
+<div class="main-content">
+    {% if selected_table %}
+    <h3>Table: {{ selected_table }}</h3>
+    {% if table_data %}
+    <table class="table table-bordered">
+        <thead>
+            {% for column, value in table_data.items() %}
+                <th>{{ column }}</th>
+            {% endfor %}
+        </thead>
+        <tbody>
+            {% for column, value in table_data.items() %}
+            <tr>
+                <td>{{ value }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+        <p>No data available for this table.</p>
+    {% endif %}
+    {% else %}
+    <p>Select a table from the sidebar to view its contents.</p>
+    {% endif %}
+</div>
 {% endblock %}

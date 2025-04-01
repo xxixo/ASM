@@ -1,5 +1,25 @@
 {% extends "components/base.html" %}
 
 {% block content %}
-    This is Settings
+<div class="main-content">
+    {% if selected_table %}
+    <h3>Table: {{ selected_table }}</h3>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                    <th>{{ key }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for column, value in table_data.items() %}
+            <tr>
+                <td>{{ column }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p>Select a table from the sidebar to view its contents.</p>
+    {% endif %}
+</div>
 {% endblock %}

@@ -127,3 +127,42 @@ button.create:hover {
 }
 
 
+/* Стилізація таблиці */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #161b22; /* Dark background for table */
+    color: #c9d1d9; /* Light text color */
+    border: 1px solid #30363d; /* Border color */
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.table th, .table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #21262d; /* Row separator */
+}
+
+.table th {
+    background-color: #21262d; /* Header background */
+    color: #f0f6fc; /* Header text color */
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+.table tr:hover {
+    background-color: #2d333b; /* Row hover effect */
+}
+
+.table td {
+    font-size: 0.9em;
+}
+
+/* Responsive table for smaller screens */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
