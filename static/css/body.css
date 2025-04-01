@@ -96,6 +96,27 @@ button.create:hover {
     background-color: #289905; /* Darker blue on hover */
 }
 
+.back-button {
+    margin-top: 20px;
+    text-align: left;
+    padding-bottom: 5px;
+}
+
+.back-button .btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #6c757d; /* Gray background */
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9em;
+    transition: background-color 0.2s ease;
+}
+
+.back-button .btn:hover {
+    background-color: #5a6268; /* Darker gray on hover */
+}
+
 /* Стилізація кнопки видалення (delete) */
 .delete {
     width: 10%;

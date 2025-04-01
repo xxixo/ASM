@@ -1,14 +1,12 @@
 {% extends "components/base.html" %}
 
 {% block content %}
-<h2>Manage Table: {{ table_name }}</h2>
 
-<h3>Columns</h3>
-<ul>
-    {% for column in columns %}
-    <li>{{ column }}</li>
-    {% endfor %}
-</ul>
+<div class="back-button">
+    <a href="{{ parent_link }}" class="btn btn-secondary">← Back</a>
+</div>
+
+<h2>Manage Table: {{ table_name }}</h2>
 
 <h3>Add Column</h3>
 <form method="POST" action="{{ url_for('manage_table', table_name=table_name) }}">
@@ -32,5 +30,21 @@
     <button type="submit" class="delete">Delete Column</button>
 </form>
 
-<a href="{{ parent_link }}">Back to Tables</a>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Existed column</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for column in columns %}
+        <tr>
+            <td>{{ column }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+
 {% endblock %}
